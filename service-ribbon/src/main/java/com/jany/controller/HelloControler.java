@@ -1,0 +1,33 @@
+package com.jany.controller;
+
+import com.jany.service.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * <p>
+ * ---<br>
+ * </p>
+ * <p>
+ * -----版本-----变更日期-----责任人-----变更内容<br>
+ * ─────────────────────────────────────<br>
+ * V3.0.0 2018/4/9 liuxiangtao 初版<br>
+ *
+ * @since XMJR V3.0.0
+ * </p>
+ */
+@RestController
+public class HelloControler {
+
+    @Autowired
+    HelloService helloService;
+
+
+    @RequestMapping(value = "/hi")
+    public String hi(@RequestParam String name){
+        return helloService.hiService(name);
+    }
+
+}
