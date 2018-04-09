@@ -1,0 +1,10 @@
+/target/
+/WebRoot
+WebRoot
+WebRoot/
+.settings/
+
+# IDEA #
+/.apt_generated/
+/.idea/
+*.iml
